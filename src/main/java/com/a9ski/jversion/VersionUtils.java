@@ -15,7 +15,7 @@ public class VersionUtils {
 		Version min = null;
 		if (versions != null) {
 			for(final Version v : versions) {
-				if (v != null && (min == null || min.compareTo(v) < 0)) {
+				if (v != null && (min == null || min.compareTo(v) > 0)) {
 					min = v;
 				}
 			}
@@ -27,7 +27,7 @@ public class VersionUtils {
 		Version max = null;
 		if (versions != null) {
 			for(final Version v : versions) {
-				if (v != null && (max == null || max.compareTo(v) > 0)) {
+				if (v != null && (max == null || max.compareTo(v) < 0)) {
 					max = v;
 				}
 			}
